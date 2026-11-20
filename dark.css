@@ -43,6 +43,10 @@ div {
     margin-right: 50px;
 }
 
+.shit::placeholder {
+    color: black;
+}
+
 .check {
     background: rgb(119, 119, 119);
     border: none;

@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+    <div>
+        <h1>VRCHAT DIDYBLUD SEARCH UP 💀💀😂 (ONLY IN OHIO)</h1>
+    </div>
+    <div>
+        <input class="shit" placeholder="insert userid here">
+        <button class="check" onclick="diddycheck()">diddyblud check</button>
+    </div>
+    <h1 class="diddy"></h1>
+
+    <script>
+        async function fetchlist() {
+            const diddylistres = await fetch("https://raw.githubusercontent.com/knownyetunsourced/database/refs/heads/main/THE_FILES.json")
+            const diddyjson = await diddylistres.json();
+            const diddylist = Object.keys(diddyjson);
+            return diddylist;
+        }
+        let truediddylist;
+        document.addEventListener("DOMContentLoaded", async () => {
+            truediddylist = await fetchlist();
+        })
+        async function diddycheck() {
+            const diddytext = document.getElementsByClassName("diddy")[0];
+            const diddyinput = document.getElementsByClassName("shit")[0];
+            if (truediddylist.includes(diddyinput.value)) {
+                diddytext.textContent = "HE IS DIDDYYYYYJITTT BOIIII💀💀😂💀💀😂💀💀😂";
+                diddytext.style.color = "red"
+            } else {
+                diddytext.textContent = "he is not a didyblud";
+                diddytext.style.color = "rgb(156, 156, 156)"
+            }
+        }
+    </script>
+</body>
